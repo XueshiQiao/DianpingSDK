@@ -11,6 +11,13 @@ It is appreciated if anyone want to make this SDK better. Please feel free to fo
 
 **NOTE:** The unofficial SDK may become unavailable if dianping's API changed. 
 
+## Usage
+
+1. Add DianpingSDK folder to your project  
+2. import DPObject.h to your source file
+
+See the demo for details.
+
 ## ARC
 
 If you try to use this SDK without ARC, you need to set the *-fno-objc-arc* flag.
