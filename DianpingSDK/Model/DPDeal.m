@@ -84,10 +84,10 @@
                                   return;
                               }
                               
-                              NSArray *postsFromResponse = [JSON valueForKeyPath:@"deals"];
+                              NSArray *dealsFromResponse = JSON[@"deals"];
                               DPDeal *deal;
                               
-                              for (NSDictionary *attributes in postsFromResponse) {
+                              for (NSDictionary *attributes in dealsFromResponse) {
                                   deal = [[DPDeal alloc] initWithAttributes:attributes];
                                   break;
                               }
@@ -132,16 +132,16 @@
                                   return;
                               }
                               
-                              NSArray *postsFromResponse = [JSON valueForKeyPath:@"deals"];
-                              NSMutableArray *mutablePosts = [NSMutableArray arrayWithCapacity:[postsFromResponse count]];
+                              NSArray *dealsFromResponse = JSON[@"deals"];
+                              NSMutableArray *deals = [NSMutableArray array];
                               
-                              for (NSDictionary *attributes in postsFromResponse) {
+                              for (NSDictionary *attributes in dealsFromResponse) {
                                   DPDeal *deal = [[DPDeal alloc] initWithAttributes:attributes];
-                                  [mutablePosts addObject:deal];
+                                  [deals addObject:deal];
                               }
                               
                               if (block) {
-                                  block([NSArray arrayWithArray:mutablePosts], nil);
+                                  block(deals, nil);
                               }
                           }
                           failure:^(NSURLSessionDataTask *__unused task, NSError *error) {
@@ -151,5 +151,92 @@
                           }
             ];
 }
+
++ (NSURLSessionDataTask *)dealIDsWithCity:(NSString *)city
+                                     date:(NSString *)date
+                                 category:(NSString *)category
+                                    block:(void (^)(NSArray *, NSError *))block
+{
+    NSString *URLString = @"deal/get_all_id_list";
+    NSMutableDictionary *mutableParams = [NSMutableDictionary dictionary];
+    [mutableParams setObject:city ? city : @"" forKey:@"city"];
+    
+    if (category) {
+        [mutableParams setObject:category ? category : @"" forKey:@"category"];
+    }
+    
+    // 获取指定日期的团购
+    if (date.length == 10) {
+        URLString = @"deal/get_daily_new_id_list";
+        [mutableParams setObject:date forKey:@"date"];
+    }
+    
+    return [[DPAPI sharedAPI] GET:URLString
+                       parameters:[DPAPI signedParamsWithParmas:mutableParams]
+                          success:^(NSURLSessionDataTask * __unused task, id JSON) {
+                              int errorCode = [JSON[@"error"][@"errorCode"] intValue];
+                              if (errorCode) {
+                                  NSLog(@"Error: %@", JSON[@"error"][@"errorMessage"]);
+                                  
+                                  if (block) {
+                                      block(nil, [DPAPI errorWithCode:errorCode message:JSON[@"error"][@"errorMessage"]]);
+                                  }
+                                  
+                                  return;
+                              }
+                              
+                              if (block) {
+                                  block(JSON[@"id_list"], nil);
+                              }
+                          }
+                          failure:^(NSURLSessionDataTask *__unused task, NSError *error) {
+                              if (block) {
+                                  block(nil, error);
+                              }
+                          }
+            ];
+}
+
++ (NSURLSessionDataTask *)dealsWithCity:(NSString *)city
+                             businessID:(NSInteger)businessID
+                                  block:(void (^)(NSArray *, NSError *))block
+{
+    NSDictionary *params = @{@"city" : city ? city : @"",
+                             @"business_id" : businessID ? @(businessID) : @0};
+    
+    return [[DPAPI sharedAPI] GET:@"deal/get_deals_by_business_id"
+                       parameters:[DPAPI signedParamsWithParmas:params]
+                          success:^(NSURLSessionDataTask * __unused task, id JSON) {
+                              int errorCode = [JSON[@"error"][@"errorCode"] intValue];
+                              if (errorCode) {
+                                  NSLog(@"Error: %@", JSON[@"error"][@"errorMessage"]);
+                                  
+                                  if (block) {
+                                      block(nil, [DPAPI errorWithCode:errorCode message:JSON[@"error"][@"errorMessage"]]);
+                                  }
+                                  
+                                  return;
+                              }
+                              
+                              NSArray *dealsFromResponse = JSON[@"deals"];
+                              NSMutableArray *deals = [NSMutableArray array];
+                              
+                              for (NSDictionary *attributes in dealsFromResponse) {
+                                  DPDeal *deal = [[DPDeal alloc] initWithAttributes:attributes];
+                                  [deals addObject:deal];
+                              }
+                              
+                              if (block) {
+                                  block(deals, nil);
+                              }
+                          }
+                          failure:^(NSURLSessionDataTask *__unused task, NSError *error) {
+                              if (block) {
+                                  block(nil, error);
+                              }
+                          }
+            ];
+}
+
 
 @end

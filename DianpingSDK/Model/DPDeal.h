@@ -34,11 +34,24 @@
 @property (nonatomic, strong) NSArray *businesses;              // 团购所适用的商户列表
 
 
+// 获取特定的团购信息
 + (NSURLSessionDataTask *)dealWithID:(NSString *)dealID
                                block:(void (^)(DPDeal *deal, NSError *error))block;
 
+// 批量获取团购信息
 + (NSURLSessionDataTask *)dealsWithIDs:(NSArray *)dealIDs
                                  block:(void (^)(NSArray *deals, NSError *error))block;
+
+// 获取特定城市特定分类（和日期）的团购ID
++ (NSURLSessionDataTask *)dealIDsWithCity:(NSString *)city
+                                     date:(NSString *)date
+                                 category:(NSString *)category
+                                    block:(void (^)(NSArray *dealIDs, NSError *error))block;
+
+// 获取特定城市特定商户的团购信息
++ (NSURLSessionDataTask *)dealsWithCity:(NSString *)city
+                             businessID:(NSInteger)businessID
+                                  block:(void (^)(NSArray *deals, NSError *error))block;
 
 - (instancetype)initWithAttributes:(NSDictionary *)attributes;
 
