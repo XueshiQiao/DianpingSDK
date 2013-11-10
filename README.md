@@ -3,7 +3,7 @@ DianpingSDK
 
 大众点评SDK（非官方）   
 
-dianping.com Open Platform SDK (Unofficial)
+[dianping.com](http://dianping.com) Open Platform SDK (Unofficial)
 
 **NOTE:** This unofficial SDK may become unavailable if dianping's JSON response changed. 
 
