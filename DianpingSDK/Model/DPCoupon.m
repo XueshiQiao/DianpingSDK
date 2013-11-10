@@ -100,6 +100,7 @@
                               
                               NSArray *couponsFromResponse = JSON[@"coupons"];
                               DPCoupon *coupon;
+                              
                               for (NSDictionary *attributes in couponsFromResponse) {
                                   coupon = [[DPCoupon alloc] initWithAttributes:attributes];
                                   break;
