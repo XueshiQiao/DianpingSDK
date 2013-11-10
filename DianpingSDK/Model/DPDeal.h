@@ -29,8 +29,7 @@
 @property (nonatomic, assign) NSInteger isPopular;              // 是否为热门团购，0：不是，1：是
 @property (nonatomic, strong) NSArray *restrictions;            // 团购限制条件
 @property (nonatomic, strong) NSString *notice;                 // 重要通知(一般为团购信息的临时变更)
-@property (nonatomic, strong) NSString *dealURL;                // 团购Web页面链接，适用于网页应用
-@property (nonatomic, strong) NSString *dealHTML5URL;           // 团购HTML5页面链接，适用于移动应用和联网车载应用
+@property (nonatomic, strong) NSString *dealURL;                // 团购HTML5 Web页面链接
 @property (nonatomic, strong) NSArray *businesses;              // 团购所适用的商户列表
 
 

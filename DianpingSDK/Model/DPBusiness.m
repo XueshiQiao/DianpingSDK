@@ -49,7 +49,7 @@
             DPDeal *deal = [[DPDeal alloc] init];
             deal.dealID = dealAttributes[@"id"];
             deal.desc = dealAttributes[@"description"];
-            deal.dealURL = dealAttributes[@"url"];
+            deal.dealURL = dealAttributes[@"h5_url"];
             [deals addObject:deal];
         }
         self.deals = deals;

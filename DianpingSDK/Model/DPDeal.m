@@ -45,8 +45,7 @@
         self.restrictions = restrictions;
         
         self.notice = attributes[@"notice"];
-        self.dealURL = attributes[@"deal_url"];
-        self.dealHTML5URL = attributes[@"deal_h5_url"];
+        self.dealURL = attributes[@"deal_h5_url"];
         
         NSMutableArray *businesses = [NSMutableArray array];
         for (NSDictionary *businessAttributes in attributes[@"businesses"]) {
@@ -56,7 +55,7 @@
             business.address = businessAttributes[@"address"];
             business.latitude = [businessAttributes[@"latitude"] floatValue];
             business.longitude = [businessAttributes[@"longitude"] floatValue];
-            business.businessURL = businessAttributes[@"url"];
+            business.businessURL = businessAttributes[@"h5_url"];
             [businesses addObject:business];
         }
         self.businesses = businesses;
