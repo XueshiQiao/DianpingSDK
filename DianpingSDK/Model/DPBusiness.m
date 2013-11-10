@@ -118,6 +118,7 @@
                               
                               NSArray *businessesFromResponse = JSON[@"businesses"];
                               DPBusiness *business;
+                              
                               for (NSDictionary *attributes in businessesFromResponse) {
                                   business = [[DPBusiness alloc] initWithAttributes:attributes];
                                   break;
