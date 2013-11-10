@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B29BD753182F76F00003F4C4 /* DPCoupon.m in Sources */ = {isa = PBXBuildFile; fileRef = B29BD752182F76F00003F4C4 /* DPCoupon.m */; };
+		B29BD756182F7D2D0003F4C4 /* DPReview.m in Sources */ = {isa = PBXBuildFile; fileRef = B29BD755182F7D2D0003F4C4 /* DPReview.m */; };
 		B2A26676182F39ED00BEABF3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2A26675182F39ED00BEABF3 /* Foundation.framework */; };
 		B2A26678182F39ED00BEABF3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2A26677182F39ED00BEABF3 /* CoreGraphics.framework */; };
 		B2A2667A182F39ED00BEABF3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2A26679182F39ED00BEABF3 /* UIKit.framework */; };
@@ -49,6 +50,8 @@
 /* Begin PBXFileReference section */
 		B29BD751182F76F00003F4C4 /* DPCoupon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPCoupon.h; sourceTree = "<group>"; };
 		B29BD752182F76F00003F4C4 /* DPCoupon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPCoupon.m; sourceTree = "<group>"; };
+		B29BD754182F7D2D0003F4C4 /* DPReview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPReview.h; sourceTree = "<group>"; };
+		B29BD755182F7D2D0003F4C4 /* DPReview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPReview.m; sourceTree = "<group>"; };
 		B2A26672182F39ED00BEABF3 /* DianpingSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DianpingSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2A26675182F39ED00BEABF3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B2A26677182F39ED00BEABF3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -252,6 +255,8 @@
 				B2A266D9182F5DE600BEABF3 /* DPRestriction.m */,
 				B29BD751182F76F00003F4C4 /* DPCoupon.h */,
 				B29BD752182F76F00003F4C4 /* DPCoupon.m */,
+				B29BD754182F7D2D0003F4C4 /* DPReview.h */,
+				B29BD755182F7D2D0003F4C4 /* DPReview.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -359,6 +364,7 @@
 				B2A266DA182F5DE600BEABF3 /* DPBusiness.m in Sources */,
 				B2A266DC182F5DE600BEABF3 /* DPRestriction.m in Sources */,
 				B2A266BA182F3A7600BEABF3 /* AFHTTPRequestOperation.m in Sources */,
+				B29BD756182F7D2D0003F4C4 /* DPReview.m in Sources */,
 				B2A266C2182F3A7600BEABF3 /* AFURLSessionManager.m in Sources */,
 				B2A266C1182F3A7600BEABF3 /* AFURLResponseSerialization.m in Sources */,
 				B2A26686182F39ED00BEABF3 /* DPAppDelegate.m in Sources */,
