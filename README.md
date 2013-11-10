@@ -5,7 +5,7 @@ DianpingSDK
 
 This is an unofficial SDK for [dianping.com](http://dianping.com) Open Platform, it's targeting either iOS 6.0 and above.
 
-The network operations are based on the famous [AFNetWorking](https://github.com/AFNetworking/AFNetworking).
+The network operations are powered by the famous [AFNetWorking](https://github.com/AFNetworking/AFNetworking) library.
 
 It is appreciated if anyone want to make this SDK better. 
 Just feel free to fork and modify this repository.
