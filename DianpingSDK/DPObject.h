@@ -10,5 +10,6 @@
 #define DianpingSDKDemo_DPObject_h
 
     #import "DPBusiness.h"
+    #import "DPDeal.h"
 
 #endif /* DianpingSDKDemo_DPObject_h */

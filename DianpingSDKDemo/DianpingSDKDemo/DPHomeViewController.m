@@ -15,6 +15,7 @@ static NSString * const cellIdentifier = @"cell";
 @interface DPHomeViewController ()
 
 @property (nonatomic, strong) NSArray *businesses;
+@property (nonatomic, strong) NSArray *deals;
 
 @end
 
@@ -50,6 +51,7 @@ static NSString * const cellIdentifier = @"cell";
 
 - (void)loadBusinesses
 {
+    /*
     NSDictionary *params = @{@"city" : @"杭州"};
     
     NSURLSessionTask *task = [DPBusiness businessesWithParams:[DPAPI signedParamsWithParmas:params]
@@ -62,6 +64,23 @@ static NSString * const cellIdentifier = @"cell";
                                                               NSLog(@"%@", [error localizedDescription]);
                                                           }
                                                       }
+                              ];
+     */
+    
+    
+    
+    NSDictionary *params = @{@"deal_id" : @"1-5097286"};
+    
+    NSURLSessionTask *task = [DPDeal dealsWithParams:[DPAPI signedParamsWithParmas:params]
+                                                        block:^(NSArray *deals, NSError *error) {
+                                                            if (!error) {
+                                                                self.deals = deals;
+                                                                [self.tableView reloadData];
+                                                            }
+                                                            else {
+                                                                NSLog(@"%@", [error localizedDescription]);
+                                                            }
+                                                        }
                               ];
     
     [task resume];
@@ -76,15 +95,19 @@ static NSString * const cellIdentifier = @"cell";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    return self.deals.count;
     return self.businesses.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     DPBusiness *business = self.businesses[indexPath.row];
+    DPDeal *deal = self.deals[indexPath.row];
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     cell.textLabel.text = business.name;
+    
+    cell.textLabel.text = deal.desc;
     
     return cell;
 }

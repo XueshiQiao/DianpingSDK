@@ -8,6 +8,7 @@
 
 #import "DPBusiness.h"
 #import "DPAPI.h"
+#import "DPDeal.h"
 
 @implementation DPBusiness
 
@@ -26,7 +27,7 @@
         self.longitude = [attributes[@"longitude"] floatValue];
         self.avgRating = [attributes[@"avg_rating"] floatValue];
         self.ratingImgURL = attributes[@"rating_img_url"];
-        self.ratingImgURLSmall = attributes[@"rating_s_img_url"];
+        self.smallRatingImgURL = attributes[@"rating_s_img_url"];
         self.productGrade = [attributes[@"product_grade"] integerValue];
         self.decorationGrade = [attributes[@"decoration_grade"] integerValue];
         self.serviceGrade = [attributes[@"service_grade"] integerValue];
@@ -35,14 +36,23 @@
         self.distance = [attributes[@"distance"] integerValue];
         self.businessURL = attributes[@"business_url"];
         self.photoURL = attributes[@"photo_url"];
-        self.photoURLSmall = attributes[@"s_photo_url"];
+        self.smallPhotoURL = attributes[@"s_photo_url"];
         self.hasCoupon = [attributes[@"has_coupon"] integerValue];
         self.couponID = [attributes[@"coupon_id"] integerValue];
-        self.couponDescription = attributes[@"coupon_description"];
+        self.couponDesc = attributes[@"coupon_description"];
         self.couponURL = attributes[@"coupon_url"];
         self.hasDeal = [attributes[@"has_deal"] integerValue];
         self.dealCount = [attributes[@"deal_count"] integerValue];
-        self.deals = attributes[@"deals"];
+        
+        NSMutableArray *deals = [NSMutableArray array];
+        for (NSDictionary *dealAttributes in attributes[@"deals"]) {
+            DPDeal *deal = [[DPDeal alloc] init];
+            deal.dealID = dealAttributes[@"id"];
+            deal.desc = dealAttributes[@"description"];
+            deal.dealURL = dealAttributes[@"url"];
+            [deals addObject:deal];
+        }
+        self.deals = deals;
     }
     
     return self;
@@ -53,13 +63,12 @@
     return [[DPAPI sharedAPI] GET:@"business/find_businesses"
                      parameters:params
                         success:^(NSURLSessionDataTask * __unused task, id JSON) {
-                            NSLog(@"json:%@", JSON);
                             int errorCode = [JSON[@"error"][@"errorCode"] intValue];
                             if (errorCode) {
                                 NSLog(@"Error: %@", JSON[@"error"][@"errorMessage"]);
                                 
                                 if (block) {
-                                    block([NSArray arrayWithArray:nil], [DPAPI errorWithCode:errorCode message:JSON[@"error"][@"errorMessage"]]);
+                                    block(nil, [DPAPI errorWithCode:errorCode message:JSON[@"error"][@"errorMessage"]]);
                                 }
                                 
                                 return;
@@ -84,4 +93,5 @@
                         }
             ];
 }
+
 @end
