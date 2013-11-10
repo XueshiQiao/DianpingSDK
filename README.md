@@ -7,14 +7,13 @@ This is an unofficial SDK for [dianping.com](http://dianping.com) Open Platform,
 
 The network operations are powered by the famous [AFNetWorking](https://github.com/AFNetworking/AFNetworking) library.
 
-It is appreciated if anyone want to make this SDK better. 
-Just feel free to fork and modify this repository.
+It is appreciated if anyone want to make this SDK better. Please feel free to fork and modify this repository.
 
-**NOTE:** This unofficial SDK may become unavailable if dianping's API changed. 
+**NOTE:** The unofficial SDK may become unavailable if dianping's API changed. 
 
 ## ARC
 
-If you try to use this SDK without ARC, you need to set the "-fno-objc-arc" flag.
+If you try to use this SDK without ARC, you need to set the *-fno-objc-arc* flag.
 
 ## Demo
 
