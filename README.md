@@ -14,7 +14,7 @@ It is appreciated if anyone want to make this SDK better. Please feel free to fo
 ## Usage
 
 1. Add DianpingSDK folder to your project  
-2. import DPObject.h to your source file
+2. Import DPObject.h to your source file
 
 See the demo for details.
 
