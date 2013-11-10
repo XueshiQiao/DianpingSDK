@@ -115,7 +115,7 @@
         [paramString appendString:dealID];
     }
     
-    NSDictionary *params = @{@"deal_ids" : paramString};
+    NSDictionary *params = @{@"deal_ids" : paramString ? paramString : @""};
     
     return [[DPAPI sharedAPI] GET:@"deal/get_batch_deals_by_id"
                        parameters:[DPAPI signedParamsWithParmas:params]

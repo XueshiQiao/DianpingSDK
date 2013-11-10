@@ -100,7 +100,7 @@
                                    block:(void (^)(DPBusiness *, NSError *))block
 {
     NSMutableDictionary *mutableParams = params ? [params mutableCopy] : [NSMutableDictionary dictionary];
-    [mutableParams setObject:[NSString stringWithFormat:@"%d", businessID] forKey:@"business_id"];
+    [mutableParams setObject:businessID ? @(businessID) : @0 forKey:@"business_id"];
     
     return [[DPAPI sharedAPI] GET:@"business/get_single_business"
                        parameters:[DPAPI signedParamsWithParmas:mutableParams]
