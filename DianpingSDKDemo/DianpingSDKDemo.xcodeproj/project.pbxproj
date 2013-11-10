@@ -1,0 +1,560 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B2A26676182F39ED00BEABF3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2A26675182F39ED00BEABF3 /* Foundation.framework */; };
+		B2A26678182F39ED00BEABF3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2A26677182F39ED00BEABF3 /* CoreGraphics.framework */; };
+		B2A2667A182F39ED00BEABF3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2A26679182F39ED00BEABF3 /* UIKit.framework */; };
+		B2A26680182F39ED00BEABF3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B2A2667E182F39ED00BEABF3 /* InfoPlist.strings */; };
+		B2A26682182F39ED00BEABF3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A26681182F39ED00BEABF3 /* main.m */; };
+		B2A26686182F39ED00BEABF3 /* DPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A26685182F39ED00BEABF3 /* DPAppDelegate.m */; };
+		B2A26688182F39ED00BEABF3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2A26687182F39ED00BEABF3 /* Images.xcassets */; };
+		B2A2668F182F39ED00BEABF3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2A2668E182F39ED00BEABF3 /* XCTest.framework */; };
+		B2A26690182F39ED00BEABF3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2A26675182F39ED00BEABF3 /* Foundation.framework */; };
+		B2A26691182F39ED00BEABF3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2A26679182F39ED00BEABF3 /* UIKit.framework */; };
+		B2A26699182F39ED00BEABF3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B2A26697182F39ED00BEABF3 /* InfoPlist.strings */; };
+		B2A2669B182F39ED00BEABF3 /* DianpingSDKDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A2669A182F39ED00BEABF3 /* DianpingSDKDemoTests.m */; };
+		B2A266BA182F3A7600BEABF3 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A266A8182F3A7600BEABF3 /* AFHTTPRequestOperation.m */; };
+		B2A266BB182F3A7600BEABF3 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A266AA182F3A7600BEABF3 /* AFHTTPRequestOperationManager.m */; };
+		B2A266BC182F3A7600BEABF3 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A266AC182F3A7600BEABF3 /* AFHTTPSessionManager.m */; };
+		B2A266BD182F3A7600BEABF3 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A266AF182F3A7600BEABF3 /* AFNetworkReachabilityManager.m */; };
+		B2A266BE182F3A7600BEABF3 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A266B1182F3A7600BEABF3 /* AFSecurityPolicy.m */; };
+		B2A266BF182F3A7600BEABF3 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A266B3182F3A7600BEABF3 /* AFURLConnectionOperation.m */; };
+		B2A266C0182F3A7600BEABF3 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A266B5182F3A7600BEABF3 /* AFURLRequestSerialization.m */; };
+		B2A266C1182F3A7600BEABF3 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A266B7182F3A7600BEABF3 /* AFURLResponseSerialization.m */; };
+		B2A266C2182F3A7600BEABF3 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A266B9182F3A7600BEABF3 /* AFURLSessionManager.m */; };
+		B2A266C5182F3AAE00BEABF3 /* DPHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A266C4182F3AAE00BEABF3 /* DPHomeViewController.m */; };
+		B2A266C8182F3B5F00BEABF3 /* DPAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A266C7182F3B5F00BEABF3 /* DPAPI.m */; };
+		B2A266CB182F3EAB00BEABF3 /* DPBusiness.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A266CA182F3EAB00BEABF3 /* DPBusiness.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B2A26692182F39ED00BEABF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2A2666A182F39ED00BEABF3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2A26671182F39ED00BEABF3;
+			remoteInfo = DianpingSDKDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B2A26672182F39ED00BEABF3 /* DianpingSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DianpingSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2A26675182F39ED00BEABF3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B2A26677182F39ED00BEABF3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B2A26679182F39ED00BEABF3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B2A2667D182F39ED00BEABF3 /* DianpingSDKDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DianpingSDKDemo-Info.plist"; sourceTree = "<group>"; };
+		B2A2667F182F39ED00BEABF3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B2A26681182F39ED00BEABF3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B2A26683182F39ED00BEABF3 /* DianpingSDKDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DianpingSDKDemo-Prefix.pch"; sourceTree = "<group>"; };
+		B2A26684182F39ED00BEABF3 /* DPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPAppDelegate.h; sourceTree = "<group>"; };
+		B2A26685182F39ED00BEABF3 /* DPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DPAppDelegate.m; sourceTree = "<group>"; };
+		B2A26687182F39ED00BEABF3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B2A2668D182F39ED00BEABF3 /* DianpingSDKDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DianpingSDKDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2A2668E182F39ED00BEABF3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		B2A26696182F39ED00BEABF3 /* DianpingSDKDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DianpingSDKDemoTests-Info.plist"; sourceTree = "<group>"; };
+		B2A26698182F39ED00BEABF3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B2A2669A182F39ED00BEABF3 /* DianpingSDKDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DianpingSDKDemoTests.m; sourceTree = "<group>"; };
+		B2A266A7182F3A7600BEABF3 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		B2A266A8182F3A7600BEABF3 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		B2A266A9182F3A7600BEABF3 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		B2A266AA182F3A7600BEABF3 /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		B2A266AB182F3A7600BEABF3 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		B2A266AC182F3A7600BEABF3 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		B2A266AD182F3A7600BEABF3 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		B2A266AE182F3A7600BEABF3 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		B2A266AF182F3A7600BEABF3 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		B2A266B0182F3A7600BEABF3 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		B2A266B1182F3A7600BEABF3 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		B2A266B2182F3A7600BEABF3 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		B2A266B3182F3A7600BEABF3 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		B2A266B4182F3A7600BEABF3 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		B2A266B5182F3A7600BEABF3 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		B2A266B6182F3A7600BEABF3 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		B2A266B7182F3A7600BEABF3 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		B2A266B8182F3A7600BEABF3 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		B2A266B9182F3A7600BEABF3 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		B2A266C3182F3AAE00BEABF3 /* DPHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPHomeViewController.h; sourceTree = "<group>"; };
+		B2A266C4182F3AAE00BEABF3 /* DPHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPHomeViewController.m; sourceTree = "<group>"; };
+		B2A266C6182F3B5F00BEABF3 /* DPAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPAPI.h; sourceTree = "<group>"; };
+		B2A266C7182F3B5F00BEABF3 /* DPAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPAPI.m; sourceTree = "<group>"; };
+		B2A266C9182F3EAB00BEABF3 /* DPBusiness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPBusiness.h; sourceTree = "<group>"; };
+		B2A266CA182F3EAB00BEABF3 /* DPBusiness.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPBusiness.m; sourceTree = "<group>"; };
+		B2A266CC182F419600BEABF3 /* DPObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPObject.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B2A2666F182F39ED00BEABF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2A26678182F39ED00BEABF3 /* CoreGraphics.framework in Frameworks */,
+				B2A2667A182F39ED00BEABF3 /* UIKit.framework in Frameworks */,
+				B2A26676182F39ED00BEABF3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2A2668A182F39ED00BEABF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2A2668F182F39ED00BEABF3 /* XCTest.framework in Frameworks */,
+				B2A26691182F39ED00BEABF3 /* UIKit.framework in Frameworks */,
+				B2A26690182F39ED00BEABF3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B2A26669182F39ED00BEABF3 = {
+			isa = PBXGroup;
+			children = (
+				B2A2667B182F39ED00BEABF3 /* DianpingSDKDemo */,
+				B2A26694182F39ED00BEABF3 /* DianpingSDKDemoTests */,
+				B2A26674182F39ED00BEABF3 /* Frameworks */,
+				B2A26673182F39ED00BEABF3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B2A26673182F39ED00BEABF3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B2A26672182F39ED00BEABF3 /* DianpingSDKDemo.app */,
+				B2A2668D182F39ED00BEABF3 /* DianpingSDKDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B2A26674182F39ED00BEABF3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2A26675182F39ED00BEABF3 /* Foundation.framework */,
+				B2A26677182F39ED00BEABF3 /* CoreGraphics.framework */,
+				B2A26679182F39ED00BEABF3 /* UIKit.framework */,
+				B2A2668E182F39ED00BEABF3 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B2A2667B182F39ED00BEABF3 /* DianpingSDKDemo */ = {
+			isa = PBXGroup;
+			children = (
+				B2A266A4182F3A7600BEABF3 /* DianpingSDK */,
+				B2A26684182F39ED00BEABF3 /* DPAppDelegate.h */,
+				B2A26685182F39ED00BEABF3 /* DPAppDelegate.m */,
+				B2A266C3182F3AAE00BEABF3 /* DPHomeViewController.h */,
+				B2A266C4182F3AAE00BEABF3 /* DPHomeViewController.m */,
+				B2A26687182F39ED00BEABF3 /* Images.xcassets */,
+				B2A2667C182F39ED00BEABF3 /* Supporting Files */,
+			);
+			path = DianpingSDKDemo;
+			sourceTree = "<group>";
+		};
+		B2A2667C182F39ED00BEABF3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B2A2667D182F39ED00BEABF3 /* DianpingSDKDemo-Info.plist */,
+				B2A2667E182F39ED00BEABF3 /* InfoPlist.strings */,
+				B2A26681182F39ED00BEABF3 /* main.m */,
+				B2A26683182F39ED00BEABF3 /* DianpingSDKDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B2A26694182F39ED00BEABF3 /* DianpingSDKDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				B2A2669A182F39ED00BEABF3 /* DianpingSDKDemoTests.m */,
+				B2A26695182F39ED00BEABF3 /* Supporting Files */,
+			);
+			path = DianpingSDKDemoTests;
+			sourceTree = "<group>";
+		};
+		B2A26695182F39ED00BEABF3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B2A26696182F39ED00BEABF3 /* DianpingSDKDemoTests-Info.plist */,
+				B2A26697182F39ED00BEABF3 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B2A266A4182F3A7600BEABF3 /* DianpingSDK */ = {
+			isa = PBXGroup;
+			children = (
+				B2A266CC182F419600BEABF3 /* DPObject.h */,
+				B2A266C6182F3B5F00BEABF3 /* DPAPI.h */,
+				B2A266C7182F3B5F00BEABF3 /* DPAPI.m */,
+				B2A266C9182F3EAB00BEABF3 /* DPBusiness.h */,
+				B2A266CA182F3EAB00BEABF3 /* DPBusiness.m */,
+				B2A266A5182F3A7600BEABF3 /* Vendor */,
+			);
+			name = DianpingSDK;
+			path = ../../DianpingSDK;
+			sourceTree = "<group>";
+		};
+		B2A266A5182F3A7600BEABF3 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				B2A266A6182F3A7600BEABF3 /* AFNetworking */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		B2A266A6182F3A7600BEABF3 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				B2A266A7182F3A7600BEABF3 /* AFHTTPRequestOperation.h */,
+				B2A266A8182F3A7600BEABF3 /* AFHTTPRequestOperation.m */,
+				B2A266A9182F3A7600BEABF3 /* AFHTTPRequestOperationManager.h */,
+				B2A266AA182F3A7600BEABF3 /* AFHTTPRequestOperationManager.m */,
+				B2A266AB182F3A7600BEABF3 /* AFHTTPSessionManager.h */,
+				B2A266AC182F3A7600BEABF3 /* AFHTTPSessionManager.m */,
+				B2A266AD182F3A7600BEABF3 /* AFNetworking.h */,
+				B2A266AE182F3A7600BEABF3 /* AFNetworkReachabilityManager.h */,
+				B2A266AF182F3A7600BEABF3 /* AFNetworkReachabilityManager.m */,
+				B2A266B0182F3A7600BEABF3 /* AFSecurityPolicy.h */,
+				B2A266B1182F3A7600BEABF3 /* AFSecurityPolicy.m */,
+				B2A266B2182F3A7600BEABF3 /* AFURLConnectionOperation.h */,
+				B2A266B3182F3A7600BEABF3 /* AFURLConnectionOperation.m */,
+				B2A266B4182F3A7600BEABF3 /* AFURLRequestSerialization.h */,
+				B2A266B5182F3A7600BEABF3 /* AFURLRequestSerialization.m */,
+				B2A266B6182F3A7600BEABF3 /* AFURLResponseSerialization.h */,
+				B2A266B7182F3A7600BEABF3 /* AFURLResponseSerialization.m */,
+				B2A266B8182F3A7600BEABF3 /* AFURLSessionManager.h */,
+				B2A266B9182F3A7600BEABF3 /* AFURLSessionManager.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B2A26671182F39ED00BEABF3 /* DianpingSDKDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2A2669E182F39ED00BEABF3 /* Build configuration list for PBXNativeTarget "DianpingSDKDemo" */;
+			buildPhases = (
+				B2A2666E182F39ED00BEABF3 /* Sources */,
+				B2A2666F182F39ED00BEABF3 /* Frameworks */,
+				B2A26670182F39ED00BEABF3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DianpingSDKDemo;
+			productName = DianpingSDKDemo;
+			productReference = B2A26672182F39ED00BEABF3 /* DianpingSDKDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B2A2668C182F39ED00BEABF3 /* DianpingSDKDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2A266A1182F39ED00BEABF3 /* Build configuration list for PBXNativeTarget "DianpingSDKDemoTests" */;
+			buildPhases = (
+				B2A26689182F39ED00BEABF3 /* Sources */,
+				B2A2668A182F39ED00BEABF3 /* Frameworks */,
+				B2A2668B182F39ED00BEABF3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B2A26693182F39ED00BEABF3 /* PBXTargetDependency */,
+			);
+			name = DianpingSDKDemoTests;
+			productName = DianpingSDKDemoTests;
+			productReference = B2A2668D182F39ED00BEABF3 /* DianpingSDKDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B2A2666A182F39ED00BEABF3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DP;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Johnny;
+				TargetAttributes = {
+					B2A2668C182F39ED00BEABF3 = {
+						TestTargetID = B2A26671182F39ED00BEABF3;
+					};
+				};
+			};
+			buildConfigurationList = B2A2666D182F39ED00BEABF3 /* Build configuration list for PBXProject "DianpingSDKDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B2A26669182F39ED00BEABF3;
+			productRefGroup = B2A26673182F39ED00BEABF3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B2A26671182F39ED00BEABF3 /* DianpingSDKDemo */,
+				B2A2668C182F39ED00BEABF3 /* DianpingSDKDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B2A26670182F39ED00BEABF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2A26680182F39ED00BEABF3 /* InfoPlist.strings in Resources */,
+				B2A26688182F39ED00BEABF3 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2A2668B182F39ED00BEABF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2A26699182F39ED00BEABF3 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B2A2666E182F39ED00BEABF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2A266C0182F3A7600BEABF3 /* AFURLRequestSerialization.m in Sources */,
+				B2A266BF182F3A7600BEABF3 /* AFURLConnectionOperation.m in Sources */,
+				B2A266BE182F3A7600BEABF3 /* AFSecurityPolicy.m in Sources */,
+				B2A266CB182F3EAB00BEABF3 /* DPBusiness.m in Sources */,
+				B2A266BA182F3A7600BEABF3 /* AFHTTPRequestOperation.m in Sources */,
+				B2A266C2182F3A7600BEABF3 /* AFURLSessionManager.m in Sources */,
+				B2A266C1182F3A7600BEABF3 /* AFURLResponseSerialization.m in Sources */,
+				B2A26686182F39ED00BEABF3 /* DPAppDelegate.m in Sources */,
+				B2A266BC182F3A7600BEABF3 /* AFHTTPSessionManager.m in Sources */,
+				B2A266BB182F3A7600BEABF3 /* AFHTTPRequestOperationManager.m in Sources */,
+				B2A266C5182F3AAE00BEABF3 /* DPHomeViewController.m in Sources */,
+				B2A266C8182F3B5F00BEABF3 /* DPAPI.m in Sources */,
+				B2A266BD182F3A7600BEABF3 /* AFNetworkReachabilityManager.m in Sources */,
+				B2A26682182F39ED00BEABF3 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2A26689182F39ED00BEABF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2A2669B182F39ED00BEABF3 /* DianpingSDKDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B2A26693182F39ED00BEABF3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B2A26671182F39ED00BEABF3 /* DianpingSDKDemo */;
+			targetProxy = B2A26692182F39ED00BEABF3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B2A2667E182F39ED00BEABF3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2A2667F182F39ED00BEABF3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B2A26697182F39ED00BEABF3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2A26698182F39ED00BEABF3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B2A2669C182F39ED00BEABF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B2A2669D182F39ED00BEABF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B2A2669F182F39ED00BEABF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DianpingSDKDemo/DianpingSDKDemo-Prefix.pch";
+				INFOPLIST_FILE = "DianpingSDKDemo/DianpingSDKDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B2A266A0182F39ED00BEABF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DianpingSDKDemo/DianpingSDKDemo-Prefix.pch";
+				INFOPLIST_FILE = "DianpingSDKDemo/DianpingSDKDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		B2A266A2182F39ED00BEABF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DianpingSDKDemo.app/DianpingSDKDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DianpingSDKDemo/DianpingSDKDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "DianpingSDKDemoTests/DianpingSDKDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		B2A266A3182F39ED00BEABF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DianpingSDKDemo.app/DianpingSDKDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DianpingSDKDemo/DianpingSDKDemo-Prefix.pch";
+				INFOPLIST_FILE = "DianpingSDKDemoTests/DianpingSDKDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B2A2666D182F39ED00BEABF3 /* Build configuration list for PBXProject "DianpingSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2A2669C182F39ED00BEABF3 /* Debug */,
+				B2A2669D182F39ED00BEABF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2A2669E182F39ED00BEABF3 /* Build configuration list for PBXNativeTarget "DianpingSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2A2669F182F39ED00BEABF3 /* Debug */,
+				B2A266A0182F39ED00BEABF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B2A266A1182F39ED00BEABF3 /* Build configuration list for PBXNativeTarget "DianpingSDKDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2A266A2182F39ED00BEABF3 /* Debug */,
+				B2A266A3182F39ED00BEABF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B2A2666A182F39ED00BEABF3 /* Project object */;
+}
