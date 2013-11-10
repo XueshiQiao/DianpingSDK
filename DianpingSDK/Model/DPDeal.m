@@ -237,5 +237,46 @@
             ];
 }
 
++ (NSURLSessionDataTask *)dealsWithCity:(NSString *)city
+                                 params:(NSDictionary *)params
+                                  block:(void (^)(NSArray *, NSError *))block
+{
+    NSMutableDictionary *mutableParams = params ? [params mutableCopy] : [NSMutableDictionary dictionary];
+    [mutableParams setObject:city ? city : @"" forKey:@"city"];
+    
+    return [[DPAPI sharedAPI] GET:@"deal/find_deals"
+                       parameters:[DPAPI signedParamsWithParmas:mutableParams]
+                          success:^(NSURLSessionDataTask * __unused task, id JSON) {
+                              int errorCode = [JSON[@"error"][@"errorCode"] intValue];
+                              if (errorCode) {
+                                  NSLog(@"Error: %@", JSON[@"error"][@"errorMessage"]);
+                                  
+                                  if (block) {
+                                      block(nil, [DPAPI errorWithCode:errorCode message:JSON[@"error"][@"errorMessage"]]);
+                                  }
+                                  
+                                  return;
+                              }
+                              
+                              NSArray *dealsFromResponse = JSON[@"deals"];
+                              NSMutableArray *deals = [NSMutableArray array];
+                              
+                              for (NSDictionary *attributes in dealsFromResponse) {
+                                  DPDeal *deal = [[DPDeal alloc] initWithAttributes:attributes];
+                                  [deals addObject:deal];
+                              }
+                              
+                              if (block) {
+                                  block(deals, nil);
+                              }
+                          }
+                          failure:^(NSURLSessionDataTask *__unused task, NSError *error) {
+                              if (block) {
+                                  block(nil, error);
+                              }
+                          }
+            ];
+}
+
 
 @end

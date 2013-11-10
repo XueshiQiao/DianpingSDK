@@ -52,6 +52,12 @@
                              businessID:(NSInteger)businessID
                                   block:(void (^)(NSArray *deals, NSError *error))block;
 
+// 获取特定城市符合指定条件的团购列表
+// 可用参数列表：http://developer.dianping.com/app/api/v1/deal/find_deals
++ (NSURLSessionDataTask *)dealsWithCity:(NSString *)city
+                                 params:(NSDictionary *)params
+                                  block:(void (^)(NSArray *deals, NSError *error))block;
+
 - (instancetype)initWithAttributes:(NSDictionary *)attributes;
 
 @end
