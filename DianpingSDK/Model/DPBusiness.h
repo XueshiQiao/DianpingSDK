@@ -41,9 +41,13 @@
 @property (nonatomic, strong) NSArray *deals;               // 团购列表
 
 
+// 获取符合指定条件的商户列表
+// 可用参数列表：http://developer.dianping.com/app/api/v1/business/find_businesses
 + (NSURLSessionDataTask *)businessesWithParams:(NSDictionary *)params
                                          block:(void (^)(NSArray *businesses, NSError *error))block;
 
+// 获取特定商户的详细信息
+// 可用参数列表：http://developer.dianping.com/app/api/v1/business/get_single_business
 + (NSURLSessionDataTask *)businessWithID:(NSInteger)businessID
                                   params:(NSDictionary *)params
                                    block:(void (^)(DPBusiness *business, NSError *error))block;

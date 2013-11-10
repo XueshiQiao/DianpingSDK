@@ -75,16 +75,16 @@
                                 return;
                             }
                             
-                            NSArray *postsFromResponse = [JSON valueForKeyPath:@"businesses"];
-                            NSMutableArray *mutablePosts = [NSMutableArray arrayWithCapacity:[postsFromResponse count]];
+                            NSArray *businessesFromResponse = JSON[@"businesses"];
+                            NSMutableArray *businesses = [NSMutableArray array];
                             
-                            for (NSDictionary *attributes in postsFromResponse) {
+                            for (NSDictionary *attributes in businessesFromResponse) {
                                 DPBusiness *business = [[DPBusiness alloc] initWithAttributes:attributes];
-                                [mutablePosts addObject:business];
+                                [businesses addObject:business];
                             }
                             
                             if (block) {
-                                block([NSArray arrayWithArray:mutablePosts], nil);
+                                block(businesses, nil);
                             }
                         }
                         failure:^(NSURLSessionDataTask *__unused task, NSError *error) {
@@ -116,9 +116,9 @@
                                   return;
                               }
                               
-                              NSArray *postsFromResponse = [JSON valueForKeyPath:@"businesses"];
+                              NSArray *businessesFromResponse = JSON[@"businesses"];
                               DPBusiness *business;
-                              for (NSDictionary *attributes in postsFromResponse) {
+                              for (NSDictionary *attributes in businessesFromResponse) {
                                   business = [[DPBusiness alloc] initWithAttributes:attributes];
                                   break;
                               }
