@@ -11,5 +11,8 @@
 
     #import "DPBusiness.h"
     #import "DPDeal.h"
+    #import "DPRestriction.h"
+    #import "DPCoupon.h"
+    #import "DPReview.h"
 
 #endif /* DianpingSDKDemo_DPObject_h */
