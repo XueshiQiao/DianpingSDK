@@ -58,10 +58,11 @@
     return self;
 }
 
-+ (NSURLSessionDataTask *)businessesWithParams:(NSDictionary *)params block:(void (^)(NSArray *, NSError *))block
++ (NSURLSessionDataTask *)businessesWithParams:(NSDictionary *)params
+                                         block:(void (^)(NSArray *, NSError *))block
 {
     return [[DPAPI sharedAPI] GET:@"business/find_businesses"
-                     parameters:params
+                     parameters:[DPAPI signedParamsWithParmas:params]
                         success:^(NSURLSessionDataTask * __unused task, id JSON) {
                             int errorCode = [JSON[@"error"][@"errorCode"] intValue];
                             if (errorCode) {
@@ -88,9 +89,49 @@
                         }
                         failure:^(NSURLSessionDataTask *__unused task, NSError *error) {
                             if (block) {
-                                block([NSArray array], error);
+                                block(nil, error);
                             }
                         }
+            ];
+}
+
++ (NSURLSessionDataTask *)businessWithID:(NSInteger)businessID
+                                  params:(NSDictionary *)params
+                                   block:(void (^)(DPBusiness *, NSError *))block
+{
+    NSMutableDictionary *mutableParams = params ? [params mutableCopy] : [NSMutableDictionary dictionary];
+    [mutableParams setObject:[NSString stringWithFormat:@"%d", businessID] forKey:@"business_id"];
+    
+    return [[DPAPI sharedAPI] GET:@"business/get_single_business"
+                       parameters:[DPAPI signedParamsWithParmas:mutableParams]
+                          success:^(NSURLSessionDataTask * __unused task, id JSON) {
+                              int errorCode = [JSON[@"error"][@"errorCode"] intValue];
+                              if (errorCode) {
+                                  NSLog(@"Error: %@", JSON[@"error"][@"errorMessage"]);
+                                  
+                                  if (block) {
+                                      block(nil, [DPAPI errorWithCode:errorCode message:JSON[@"error"][@"errorMessage"]]);
+                                  }
+                                  
+                                  return;
+                              }
+                              
+                              NSArray *postsFromResponse = [JSON valueForKeyPath:@"businesses"];
+                              DPBusiness *business;
+                              for (NSDictionary *attributes in postsFromResponse) {
+                                  business = [[DPBusiness alloc] initWithAttributes:attributes];
+                                  break;
+                              }
+                              
+                              if (block) {
+                                  block(business, nil);
+                              }
+                          }
+                          failure:^(NSURLSessionDataTask *__unused task, NSError *error) {
+                              if (block) {
+                                  block(nil, error);
+                              }
+                          }
             ];
 }
 

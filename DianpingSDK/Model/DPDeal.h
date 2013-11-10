@@ -33,7 +33,9 @@
 @property (nonatomic, strong) NSString *dealHTML5URL;           // 团购HTML5页面链接，适用于移动应用和联网车载应用
 @property (nonatomic, strong) NSArray *businesses;              // 团购所适用的商户列表
 
-+ (NSURLSessionDataTask *)dealsWithParams:(NSDictionary *)params block:(void (^)(NSArray *deals, NSError *error))block;
++ (NSURLSessionDataTask *)dealsWithParams:(NSDictionary *)params
+                                    block:(void (^)(NSArray *deals, NSError *error))block;
+
 - (instancetype)initWithAttributes:(NSDictionary *)attributes;
 
 @end

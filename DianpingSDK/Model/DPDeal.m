@@ -65,10 +65,11 @@
     return self;
 }
 
-+ (NSURLSessionDataTask *)dealsWithParams:(NSDictionary *)params block:(void (^)(NSArray *, NSError *))block
++ (NSURLSessionDataTask *)dealsWithParams:(NSDictionary *)params
+                                    block:(void (^)(NSArray *, NSError *))block
 {
     return [[DPAPI sharedAPI] GET:@"deal/get_single_deal"
-                       parameters:params
+                       parameters:[DPAPI signedParamsWithParmas:params]
                           success:^(NSURLSessionDataTask * __unused task, id JSON) {
                               int errorCode = [JSON[@"error"][@"errorCode"] intValue];
                               if (errorCode) {
@@ -95,7 +96,7 @@
                           }
                           failure:^(NSURLSessionDataTask *__unused task, NSError *error) {
                               if (block) {
-                                  block([NSArray array], error);
+                                  block(nil, error);
                               }
                           }
             ];
