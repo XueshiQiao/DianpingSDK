@@ -40,6 +40,7 @@
 @property (nonatomic, assign) NSInteger dealCount;          // 商户当前在线团购数量
 @property (nonatomic, strong) NSArray *deals;               // 团购列表
 
+
 + (NSURLSessionDataTask *)businessesWithParams:(NSDictionary *)params
                                          block:(void (^)(NSArray *businesses, NSError *error))block;
 

@@ -65,10 +65,60 @@
     return self;
 }
 
-+ (NSURLSessionDataTask *)dealsWithParams:(NSDictionary *)params
-                                    block:(void (^)(NSArray *, NSError *))block
++ (NSURLSessionDataTask *)dealWithID:(NSString *)dealID
+                               block:(void (^)(DPDeal *, NSError *))block
 {
+    NSDictionary *params = @{@"deal_id" : dealID ? dealID : @""};
+    
     return [[DPAPI sharedAPI] GET:@"deal/get_single_deal"
+                       parameters:[DPAPI signedParamsWithParmas:params]
+                          success:^(NSURLSessionDataTask * __unused task, id JSON) {
+                              int errorCode = [JSON[@"error"][@"errorCode"] intValue];
+                              if (errorCode) {
+                                  NSLog(@"Error: %@", JSON[@"error"][@"errorMessage"]);
+                                  
+                                  if (block) {
+                                      block(nil, [DPAPI errorWithCode:errorCode message:JSON[@"error"][@"errorMessage"]]);
+                                  }
+                                  
+                                  return;
+                              }
+                              
+                              NSArray *postsFromResponse = [JSON valueForKeyPath:@"deals"];
+                              DPDeal *deal;
+                              
+                              for (NSDictionary *attributes in postsFromResponse) {
+                                  deal = [[DPDeal alloc] initWithAttributes:attributes];
+                                  break;
+                              }
+                              
+                              if (block) {
+                                  block(deal, nil);
+                              }
+                          }
+                          failure:^(NSURLSessionDataTask *__unused task, NSError *error) {
+                              if (block) {
+                                  block(nil, error);
+                              }
+                          }
+            ];
+}
+
++ (NSURLSessionDataTask *)dealsWithIDs:(NSArray *)dealIDs
+                                 block:(void (^)(NSArray *, NSError *))block
+{
+    NSMutableString *paramString= [NSMutableString string];
+    for (NSString *dealID in dealIDs) {
+        if (paramString.length > 0) {
+            [paramString appendString:@","];
+        }
+        
+        [paramString appendString:dealID];
+    }
+    
+    NSDictionary *params = @{@"deal_ids" : paramString};
+    
+    return [[DPAPI sharedAPI] GET:@"deal/get_batch_deals_by_id"
                        parameters:[DPAPI signedParamsWithParmas:params]
                           success:^(NSURLSessionDataTask * __unused task, id JSON) {
                               int errorCode = [JSON[@"error"][@"errorCode"] intValue];
