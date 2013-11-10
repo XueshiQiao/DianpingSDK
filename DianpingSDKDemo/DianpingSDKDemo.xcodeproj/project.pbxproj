@@ -30,9 +30,9 @@
 		B2A266C2182F3A7600BEABF3 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A266B9182F3A7600BEABF3 /* AFURLSessionManager.m */; };
 		B2A266C5182F3AAE00BEABF3 /* DPHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A266C4182F3AAE00BEABF3 /* DPHomeViewController.m */; };
 		B2A266C8182F3B5F00BEABF3 /* DPAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A266C7182F3B5F00BEABF3 /* DPAPI.m */; };
-		B2A266CB182F3EAB00BEABF3 /* DPBusiness.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A266CA182F3EAB00BEABF3 /* DPBusiness.m */; };
-		B2A266CF182F4EC700BEABF3 /* DPDeal.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A266CE182F4EC700BEABF3 /* DPDeal.m */; };
-		B2A266D2182F5ACC00BEABF3 /* DPRestriction.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A266D1182F5ACC00BEABF3 /* DPRestriction.m */; };
+		B2A266DA182F5DE600BEABF3 /* DPBusiness.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A266D5182F5DE600BEABF3 /* DPBusiness.m */; };
+		B2A266DB182F5DE600BEABF3 /* DPDeal.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A266D7182F5DE600BEABF3 /* DPDeal.m */; };
+		B2A266DC182F5DE600BEABF3 /* DPRestriction.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A266D9182F5DE600BEABF3 /* DPRestriction.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,13 +85,13 @@
 		B2A266C4182F3AAE00BEABF3 /* DPHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPHomeViewController.m; sourceTree = "<group>"; };
 		B2A266C6182F3B5F00BEABF3 /* DPAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPAPI.h; sourceTree = "<group>"; };
 		B2A266C7182F3B5F00BEABF3 /* DPAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPAPI.m; sourceTree = "<group>"; };
-		B2A266C9182F3EAB00BEABF3 /* DPBusiness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPBusiness.h; sourceTree = "<group>"; };
-		B2A266CA182F3EAB00BEABF3 /* DPBusiness.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPBusiness.m; sourceTree = "<group>"; };
 		B2A266CC182F419600BEABF3 /* DPObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPObject.h; sourceTree = "<group>"; };
-		B2A266CD182F4EC700BEABF3 /* DPDeal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPDeal.h; sourceTree = "<group>"; };
-		B2A266CE182F4EC700BEABF3 /* DPDeal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPDeal.m; sourceTree = "<group>"; };
-		B2A266D0182F5ACC00BEABF3 /* DPRestriction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPRestriction.h; sourceTree = "<group>"; };
-		B2A266D1182F5ACC00BEABF3 /* DPRestriction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPRestriction.m; sourceTree = "<group>"; };
+		B2A266D4182F5DE600BEABF3 /* DPBusiness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPBusiness.h; sourceTree = "<group>"; };
+		B2A266D5182F5DE600BEABF3 /* DPBusiness.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPBusiness.m; sourceTree = "<group>"; };
+		B2A266D6182F5DE600BEABF3 /* DPDeal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPDeal.h; sourceTree = "<group>"; };
+		B2A266D7182F5DE600BEABF3 /* DPDeal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPDeal.m; sourceTree = "<group>"; };
+		B2A266D8182F5DE600BEABF3 /* DPRestriction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPRestriction.h; sourceTree = "<group>"; };
+		B2A266D9182F5DE600BEABF3 /* DPRestriction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPRestriction.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,12 +197,7 @@
 				B2A266CC182F419600BEABF3 /* DPObject.h */,
 				B2A266C6182F3B5F00BEABF3 /* DPAPI.h */,
 				B2A266C7182F3B5F00BEABF3 /* DPAPI.m */,
-				B2A266C9182F3EAB00BEABF3 /* DPBusiness.h */,
-				B2A266CA182F3EAB00BEABF3 /* DPBusiness.m */,
-				B2A266CD182F4EC700BEABF3 /* DPDeal.h */,
-				B2A266CE182F4EC700BEABF3 /* DPDeal.m */,
-				B2A266D0182F5ACC00BEABF3 /* DPRestriction.h */,
-				B2A266D1182F5ACC00BEABF3 /* DPRestriction.m */,
+				B2A266D3182F5DE600BEABF3 /* Model */,
 				B2A266A5182F3A7600BEABF3 /* Vendor */,
 			);
 			name = DianpingSDK;
@@ -241,6 +236,19 @@
 				B2A266B9182F3A7600BEABF3 /* AFURLSessionManager.m */,
 			);
 			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		B2A266D3182F5DE600BEABF3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B2A266D4182F5DE600BEABF3 /* DPBusiness.h */,
+				B2A266D5182F5DE600BEABF3 /* DPBusiness.m */,
+				B2A266D6182F5DE600BEABF3 /* DPDeal.h */,
+				B2A266D7182F5DE600BEABF3 /* DPDeal.m */,
+				B2A266D8182F5DE600BEABF3 /* DPRestriction.h */,
+				B2A266D9182F5DE600BEABF3 /* DPRestriction.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,8 +350,8 @@
 				B2A266C0182F3A7600BEABF3 /* AFURLRequestSerialization.m in Sources */,
 				B2A266BF182F3A7600BEABF3 /* AFURLConnectionOperation.m in Sources */,
 				B2A266BE182F3A7600BEABF3 /* AFSecurityPolicy.m in Sources */,
-				B2A266CB182F3EAB00BEABF3 /* DPBusiness.m in Sources */,
-				B2A266D2182F5ACC00BEABF3 /* DPRestriction.m in Sources */,
+				B2A266DA182F5DE600BEABF3 /* DPBusiness.m in Sources */,
+				B2A266DC182F5DE600BEABF3 /* DPRestriction.m in Sources */,
 				B2A266BA182F3A7600BEABF3 /* AFHTTPRequestOperation.m in Sources */,
 				B2A266C2182F3A7600BEABF3 /* AFURLSessionManager.m in Sources */,
 				B2A266C1182F3A7600BEABF3 /* AFURLResponseSerialization.m in Sources */,
@@ -352,7 +360,7 @@
 				B2A266BB182F3A7600BEABF3 /* AFHTTPRequestOperationManager.m in Sources */,
 				B2A266C5182F3AAE00BEABF3 /* DPHomeViewController.m in Sources */,
 				B2A266C8182F3B5F00BEABF3 /* DPAPI.m in Sources */,
-				B2A266CF182F4EC700BEABF3 /* DPDeal.m in Sources */,
+				B2A266DB182F5DE600BEABF3 /* DPDeal.m in Sources */,
 				B2A266BD182F3A7600BEABF3 /* AFNetworkReachabilityManager.m in Sources */,
 				B2A26682182F39ED00BEABF3 /* main.m in Sources */,
 			);
