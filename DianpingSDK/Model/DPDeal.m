@@ -16,23 +16,23 @@
 - (instancetype)initWithAttributes:(NSDictionary *)attributes {
     
     if (self == [super init]) {
-        self.dealID = attributes[@"deal_id"];
-        self.title = attributes[@"title"];
-        self.desc = attributes[@"description"];
-        self.city = attributes[@"city"];
-        self.listPrice = [attributes[@"list_price"] floatValue];
-        self.currentPrict = [attributes[@"current_price"] floatValue];
-        self.regions = attributes[@"regions"];
-        self.categories = attributes[@"categories"];
-        self.purchaseCount = [attributes[@"purchase_count"] integerValue];
-        self.publishDate = attributes[@"publish_date"];
-        self.details = attributes[@"details"];
-        self.purchaseDeadline = attributes[@"purchase_deadline"];
-        self.imageURL = attributes[@"image_url"];
-        self.smallImageURL = attributes[@"s_image_url"];
-        self.moreImageURLs = attributes[@"more_image_urls"];
-        self.moreSmallImageURLs = attributes[@"more_s_image_urls"];
-        self.isPopular = [attributes[@"is_popular"] integerValue];
+        _dealID = attributes[@"deal_id"];
+        _title = attributes[@"title"];
+        _desc = attributes[@"description"];
+        _city = attributes[@"city"];
+        _listPrice = [attributes[@"list_price"] floatValue];
+        _currentPrict = [attributes[@"current_price"] floatValue];
+        _regions = attributes[@"regions"];
+        _categories = attributes[@"categories"];
+        _purchaseCount = [attributes[@"purchase_count"] integerValue];
+        _publishDate = attributes[@"publish_date"];
+        _details = attributes[@"details"];
+        _purchaseDeadline = attributes[@"purchase_deadline"];
+        _imageURL = attributes[@"image_url"];
+        _smallImageURL = attributes[@"s_image_url"];
+        _moreImageURLs = attributes[@"more_image_urls"];
+        _moreSmallImageURLs = attributes[@"more_s_image_urls"];
+        _isPopular = [attributes[@"is_popular"] integerValue];
         
         NSMutableArray *restrictions = [NSMutableArray array];
         for (NSDictionary *restrictionAttributes in attributes[@"restrictions"]) {
@@ -42,10 +42,10 @@
             restriction.specialTips = restrictionAttributes[@"special_tips"];
             [restrictions addObject:restriction];
         }
-        self.restrictions = restrictions;
+        _restrictions = restrictions;
         
-        self.notice = attributes[@"notice"];
-        self.dealURL = attributes[@"deal_h5_url"];
+        _notice = attributes[@"notice"];
+        _dealURL = attributes[@"deal_h5_url"];
         
         NSMutableArray *businesses = [NSMutableArray array];
         for (NSDictionary *businessAttributes in attributes[@"businesses"]) {
@@ -58,7 +58,7 @@
             business.businessURL = businessAttributes[@"h5_url"];
             [businesses addObject:business];
         }
-        self.businesses = businesses;
+        _businesses = businesses;
     }
     
     return self;

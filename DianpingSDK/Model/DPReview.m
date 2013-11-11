@@ -14,17 +14,17 @@
 - (instancetype)initWithAttributes:(NSDictionary *)attributes
 {
     if (self = [super init]) {
-        self.reviewID = [attributes[@"review_id"] integerValue];
-        self.userNickname = attributes[@"user_nickname"];
-        self.createdTime = attributes[@"created_time"];
-        self.textExcerpt = attributes[@"text_excerpt"];
-        self.reviewRating = [attributes[@"review_rating"] floatValue];
-        self.ratingImgURL = attributes[@"rating_img_url"];
-        self.smallRatingImgURL = attributes[@"rating_s_img_url"];
-        self.productRating = [attributes[@"product_rating"] integerValue];
-        self.decorationRating = [attributes[@"decoration_rating"] integerValue];
-        self.serviceRating = [attributes[@"service_rating"] integerValue];
-        self.reviewURL = attributes[@"review_url"];
+        _reviewID = [attributes[@"review_id"] integerValue];
+        _userNickname = attributes[@"user_nickname"];
+        _createdTime = attributes[@"created_time"];
+        _textExcerpt = attributes[@"text_excerpt"];
+        _reviewRating = [attributes[@"review_rating"] floatValue];
+        _ratingImgURL = attributes[@"rating_img_url"];
+        _smallRatingImgURL = attributes[@"rating_s_img_url"];
+        _productRating = [attributes[@"product_rating"] integerValue];
+        _decorationRating = [attributes[@"decoration_rating"] integerValue];
+        _serviceRating = [attributes[@"service_rating"] integerValue];
+        _reviewURL = attributes[@"review_url"];
     }
     
     return self;

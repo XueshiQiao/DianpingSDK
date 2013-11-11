@@ -15,34 +15,34 @@
 - (instancetype)initWithAttributes:(NSDictionary *)attributes {
     
     if (self == [super init]) {
-        self.businessID = [attributes[@"business_id"] integerValue];
-        self.name = attributes[@"name"];
-        self.branchName = attributes[@"branch_name"];
-        self.address = attributes[@"address"];
-        self.telephone = attributes[@"telephone"];
-        self.city = attributes[@"city"];
-        self.regions = attributes[@"regions"];
-        self.categories = attributes[@"categories"];
-        self.latitude = [attributes[@"latitude"] floatValue];
-        self.longitude = [attributes[@"longitude"] floatValue];
-        self.avgRating = [attributes[@"avg_rating"] floatValue];
-        self.ratingImgURL = attributes[@"rating_img_url"];
-        self.smallRatingImgURL = attributes[@"rating_s_img_url"];
-        self.productGrade = [attributes[@"product_grade"] integerValue];
-        self.decorationGrade = [attributes[@"decoration_grade"] integerValue];
-        self.serviceGrade = [attributes[@"service_grade"] integerValue];
-        self.avgPrice = [attributes[@"avg_price"] integerValue];
-        self.reviewCount = [attributes[@"review_count"] integerValue];
-        self.distance = [attributes[@"distance"] integerValue];
-        self.businessURL = attributes[@"business_url"];
-        self.photoURL = attributes[@"photo_url"];
-        self.smallPhotoURL = attributes[@"s_photo_url"];
-        self.hasCoupon = [attributes[@"has_coupon"] integerValue];
-        self.couponID = [attributes[@"coupon_id"] integerValue];
-        self.couponDesc = attributes[@"coupon_description"];
-        self.couponURL = attributes[@"coupon_url"];
-        self.hasDeal = [attributes[@"has_deal"] integerValue];
-        self.dealCount = [attributes[@"deal_count"] integerValue];
+        _businessID = [attributes[@"business_id"] integerValue];
+        _name = attributes[@"name"];
+        _branchName = attributes[@"branch_name"];
+        _address = attributes[@"address"];
+        _telephone = attributes[@"telephone"];
+        _city = attributes[@"city"];
+        _regions = attributes[@"regions"];
+        _categories = attributes[@"categories"];
+        _latitude = [attributes[@"latitude"] floatValue];
+        _longitude = [attributes[@"longitude"] floatValue];
+        _avgRating = [attributes[@"avg_rating"] floatValue];
+        _ratingImgURL = attributes[@"rating_img_url"];
+        _smallRatingImgURL = attributes[@"rating_s_img_url"];
+        _productGrade = [attributes[@"product_grade"] integerValue];
+        _decorationGrade = [attributes[@"decoration_grade"] integerValue];
+        _serviceGrade = [attributes[@"service_grade"] integerValue];
+        _avgPrice = [attributes[@"avg_price"] integerValue];
+        _reviewCount = [attributes[@"review_count"] integerValue];
+        _distance = [attributes[@"distance"] integerValue];
+        _businessURL = attributes[@"business_url"];
+        _photoURL = attributes[@"photo_url"];
+        _smallPhotoURL = attributes[@"s_photo_url"];
+        _hasCoupon = [attributes[@"has_coupon"] integerValue];
+        _couponID = [attributes[@"coupon_id"] integerValue];
+        _couponDesc = attributes[@"coupon_description"];
+        _couponURL = attributes[@"coupon_url"];
+        _hasDeal = [attributes[@"has_deal"] integerValue];
+        _dealCount = [attributes[@"deal_count"] integerValue];
         
         NSMutableArray *deals = [NSMutableArray array];
         for (NSDictionary *dealAttributes in attributes[@"deals"]) {
@@ -52,7 +52,7 @@
             deal.dealURL = dealAttributes[@"h5_url"];
             [deals addObject:deal];
         }
-        self.deals = deals;
+        _deals = deals;
     }
     
     return self;

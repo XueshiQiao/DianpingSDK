@@ -16,17 +16,17 @@
 {
     if (self = [super init]) {
         
-        self.couponID = [attributes[@"coupon_id"] integerValue];
-        self.title = attributes[@"title"];
-        self.desc = attributes[@"description"];
-        self.regions = attributes[@"regions"];
-        self.categories = attributes[@"categories"];
-        self.downloadCount = [attributes[@"download_count"] integerValue];
-        self.publishDate = attributes[@"publish_date"];
-        self.expirationDate = attributes[@"expiration_date"];
-        self.distance = [attributes[@"distance"] integerValue];
-        self.logoImgURL = attributes[@"logo_img_url"];
-        self.couponURL = attributes[@"coupon_h5_url"];
+        _couponID = [attributes[@"coupon_id"] integerValue];
+        _title = attributes[@"title"];
+        _desc = attributes[@"description"];
+        _regions = attributes[@"regions"];
+        _categories = attributes[@"categories"];
+        _downloadCount = [attributes[@"download_count"] integerValue];
+        _publishDate = attributes[@"publish_date"];
+        _expirationDate = attributes[@"expiration_date"];
+        _distance = [attributes[@"distance"] integerValue];
+        _logoImgURL = attributes[@"logo_img_url"];
+        _couponURL = attributes[@"coupon_h5_url"];
         
         NSMutableArray *businesses = [NSMutableArray array];
         for (NSDictionary *businessAttributes in attributes[@"businesses"]) {
@@ -36,7 +36,7 @@
             business.businessURL = businessAttributes[@"h5_url"];
             [businesses addObject:business];
         }
-        self.businesses = businesses;
+        _businesses = businesses;
     }
     
     return self;
